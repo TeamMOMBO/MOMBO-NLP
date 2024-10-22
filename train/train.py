@@ -3,7 +3,7 @@ from tqdm import tqdm
 import logging
 
 corpus_fname = 'corpus_mecab_jamo.txt'
-model_fname = 'model/fasttext'
+model_fname = '../model/fasttext'
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
