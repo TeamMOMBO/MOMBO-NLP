@@ -31,7 +31,7 @@ def levenshtein_distance(word1, word2):
 
 
 # 하이브리드 교정 함수
-def hybrid_correction(input_word, model, threshold_similarity=0.97):
+def hybrid_correction(input_word, model, threshold_similarity=0.95):
     predicted_output = predict_with_similarity(model, input_word, threshold_similarity)
 
     # 유사도 확인 및 교정 결정
@@ -47,7 +47,7 @@ def hybrid_correction(input_word, model, threshold_similarity=0.97):
 
     # 길이에 따른 편집 거리 임계값 설정
     if input_length <= 10:
-        edit_distance_threshold = 2
+        edit_distance_threshold = 1
     else:
         edit_distance_threshold = 5
 
